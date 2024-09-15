@@ -19,19 +19,28 @@ public class Part2 {
         System.out.print("Enter the number 2: ");
         n2 = sc.nextFloat();
         System.out.print("Enter the operator: ");
-        sc = new Scanner (System.in);
-        op = sc.nextLine();
-        if (op.equals("+")){
-            System.out.println("The result of "+n1+ op +n2+"= " +(n1+n2));
+        op = sc.next();
+        switch (op) {
+            case "+":
+                System.out.println("The result of " + n1 + " " + op + " " + n2 + " = " + (n1 + n2));
+                break;
+            case "-":
+                System.out.println("The result of " + n1 + " " + op + " " + n2 + " = " + (n1 - n2));
+                break;
+            case "*":
+                System.out.println("The result of " + n1 + " " + op + " " + n2 + " = " + (n1 * n2));
+                break;
+            case "/":
+                if (n2 != 0) {
+                    System.out.println("The result of " + n1 + " " + op + " " + n2 + " = " + (n1 / n2));
+                } else {
+                    System.out.println("Division by zero is not allowed.");
+                }
+                break;
+            default:
+                System.out.println("Invalid operator. Please use one of +, -, *, /.");
+                break;
         }
-        else if (op.equals("-")){
-            System.out.println("The result of "+n1+ op +n2+"= " +(n1 - n2));
-        }
-        else if (op.equals("*")){
-            System.out.println("The result of "+n1+ op +n2+"= " +(n1 * n2));
-        }
-        else if (op.equals("/")){
-            System.out.println("The result of "+n1+ op +n2+"= " +(n1 / n2));
-        }
+        sc.close();
     }
 }

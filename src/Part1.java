@@ -16,9 +16,9 @@ public class Part1 {
         int mat[][];
         Scanner sc = new Scanner (System.in);
         System.out.print("Enter number of rows: ");
-        rows = sc.nextInt();
+        rows = Integer.parseInt(sc.nextLine());
         System.out.print("Enter number of columns: ");
-        cols = sc.nextInt();
+        cols = Integer.parseInt(sc.nextLine());
         mat = new int[rows][cols];
         System.out.println("Enter the matrix: ");
         for (int i = 0; i < rows; i++){
