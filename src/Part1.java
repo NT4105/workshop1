@@ -16,9 +16,9 @@ public class Part1 {
         int mat[][];
         Scanner sc = new Scanner (System.in);
         System.out.print("Enter number of rows: ");
-        rows = Integer.parseInt(sc.nextLine());
+        rows = sc.nextInt();
         System.out.print("Enter number of columns: ");
-        cols = Integer.parseInt(sc.nextLine());
+        cols = sc.nextInt();
         mat = new int[rows][cols];
         System.out.println("Enter the matrix: ");
         for (int i = 0; i < rows; i++){
@@ -40,6 +40,7 @@ public class Part1 {
                 sum += mat[i][j];
             }
         }
+        sc.close();
         System.out.println("Sum: "+sum);
         System.out.println("Average: "+ (float)sum/(rows * cols));
     }
